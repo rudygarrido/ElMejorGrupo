@@ -1,4 +1,4 @@
-###Epidemap
+#Epidemap
 
 Proyecto realizado para la Universidad del Valle de Guatemala para los cursos de Analisis de Sistemas e Ingenieria de Software. 
 
