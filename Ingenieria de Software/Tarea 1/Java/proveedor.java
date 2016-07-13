@@ -27,4 +27,9 @@ public class proveedor{
   public void setJuguetesElectronicos(juguete electronico){
     juguetesElectronicos.add(electronico);
   }
+
+  public String toString(){
+    String temp = "Proveedor "+ this.nombre+ " y ID "+ this.id;
+    return temp;
+  }
 }
