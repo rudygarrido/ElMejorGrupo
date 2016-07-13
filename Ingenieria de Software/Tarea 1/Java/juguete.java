@@ -48,7 +48,7 @@ public class juguete{
   }
 
   public Integer getNumProveedor(){
-    return this.getNumProveedor;
+    return this.numProveedor;
   }
 
   public double getValorUnitario(){
@@ -57,6 +57,10 @@ public class juguete{
 
   public double getValorAdicional(){
     return this.valorAdicional;
+  }
+
+  public double getPrecioFinal(){
+    return 0.0;
   }
 
   public String toString(){
