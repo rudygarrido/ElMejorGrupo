@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 public class proveedor{
-  private List<juguete> juguetesMecanicos, juguetesElectronicos;
+  private ArrayList<juguete> juguetesMecanicos, juguetesElectronicos;
   private Integer id;
   private String nombre;
 
@@ -10,11 +12,11 @@ public class proveedor{
     this.nombre = nombre;
   }
 
-  public setNombre(String nombre){
+  public void setNombre(String nombre){
     this.nombre = nombre;
   }
 
-  public setId(Integer id){
+  public void setId(Integer id){
     this.id = id;
   }
 
