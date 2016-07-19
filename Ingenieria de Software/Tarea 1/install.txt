@@ -1,0 +1,8 @@
+1. Descargar o clonar el repositorio. Si fuese el caso de descarga, descomprimir el archivo a otra carpeta.
+2. Ir a la carpeta de su computadora en donde se encuentra el repositorio.
+3. Dirigirse a la dirección ElMejorGrupo/Ingieneria de Software/Tarea 1/Java
+4. Abrir la ventana de comandos en esta carpeta.
+5. Ejecutar el comando "javac vistaJuguetes.java"
+6. Luego ejecutar el comando "java vistaJuguetes"
+
+¡Listo!
