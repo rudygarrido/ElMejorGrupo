@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jugueteria;
+
 import java.util.*;
 
 private ArrayList<Proveedor> proveedores;
@@ -13,7 +13,7 @@ private int tipoUsuario=0;
  * @author Rudy Alex
  */
 public class Controlador {
-    
+
 
     public int getTipoUsuario() {
         return tipoUsuario;
@@ -30,24 +30,24 @@ public class Controlador {
     public void setProveedores(ArrayList<Proveedor> proveedores) {
         this.proveedores = proveedores;
     }
-    
-    
-    public void ingresarJuguete(String codigo, double valorUnitario, Proveedor proveedor, 
-                                        String marca, int edad, double valorAdicional, 
+
+
+    public void ingresarJuguete(String codigo, double valorUnitario, Proveedor proveedor,
+                                        String marca, int edad, double valorAdicional,
                                                 boolean tipoJuguete, int complejidad){
         if(tipoJuguete){
-            proveedor.getJuguetesElectronicos().add( new Electronico(codigo,  valorUnitario,  proveedor, 
-                                         marca,  edad,  valorAdicional, 
+            proveedor.getJuguetesElectronicos().add( new Electronico(codigo,  valorUnitario,  proveedor,
+                                         marca,  edad,  valorAdicional,
                                                  tipoJuguete));
         }else{
-            proveedor.getJuguetesMecanicos().add( new Mecanico(codigo,  valorUnitario,  proveedor, 
-                                         marca,  edad,  valorAdicional, 
+            proveedor.getJuguetesMecanicos().add( new Mecanico(codigo,  valorUnitario,  proveedor,
+                                         marca,  edad,  valorAdicional,
                                                  tipoJuguete, complejidad));
         }
     }
-    
-    public void modificarJuguete(String codigo, double valorUnitario, Proveedor proveedor, 
-                                        String marca, int edad, double valorAdicional, 
+
+    public void modificarJuguete(String codigo, double valorUnitario, Proveedor proveedor,
+                                        String marca, int edad, double valorAdicional,
                                                 boolean tipoJuguete, int complejidad){
         if(tipoJuguete){
             for(Electronico juguete : proveedor.getJuguetesElectronicos()){
@@ -58,7 +58,7 @@ public class Controlador {
                     juguete.setValorAdicional(valorAdicional);
                     juguete.setTipoJuguete(tipoJuguete);
                 }
-            }    
+            }
         }else{
             for(Mecanico juguete : proveedor.getJuguetesMecanicos()){
                 if(juguete.getCodigo().equals(codigo)){
@@ -72,7 +72,7 @@ public class Controlador {
             }
         }
     }
-    
+
     public void eliminarJuguete(String codigo){
         Proveedor proveedorElegido = null;
         Juguete jugueteEliminar = null;
@@ -98,13 +98,13 @@ public class Controlador {
             proveedorElegido.getJuguetesMecanicos().remove(jugueteEliminar);
         }
     }
-    
-    public void ingresarProveedor(int id, ArrayList<Mecanico> juguetesMecanicos, 
+
+    public void ingresarProveedor(int id, ArrayList<Mecanico> juguetesMecanicos,
                             ArrayList<Electronico> juguetesElectronicos, String nombre){
         proveedores.add(new Proveedor(id,juguetesMecanicos, juguetesElectronicos, nombre));
     }
-    
-    public void modificarProveedor(int id, ArrayList<Juguete> juguetesMecanicos, 
+
+    public void modificarProveedor(int id, ArrayList<Juguete> juguetesMecanicos,
                             ArrayList<Juguete> juguetesElectronicos, String nombre){
         for(Proveedor proveedor : proveedores){
             if(proveedor.getId() == id){
@@ -113,7 +113,7 @@ public class Controlador {
             }
         }
     }
-    
+
     public void eliminarProveedor(int id){
         Proveedor proveedorEliminar=null;
         for(Proveedor proveedor : proveedores){
@@ -123,23 +123,23 @@ public class Controlador {
         }
         proveedores.remove(proveedorEliminar);
     }
-    
+
     public String listarProveedores(){
         String lista = "Los proveedores son: \n";
         for(Proveedor proveedor: proveedores){
             if((proveedor.getJuguetesElectronicos().size()+proveedor.getJuguetesMecanicos().size())>10){
-               lista = lista + proveedor.getNombre() +"\n"; 
+               lista = lista + proveedor.getNombre() +"\n";
             }
         }
         return lista;
     }
-    
+
     public String listarProveedor(String nombre){
         String lista = "El proveedor "+ nombre +" suministra ";
         for(Proveedor proveedor: proveedores){
             if((proveedor.getNombre().equals(nombre))){
                 int numeroJuguetes= proveedor.getJuguetesElectronicos().size()+proveedor.getJuguetesMecanicos().size();
-               lista = lista + numeroJuguetes  +" juguetes"; 
+               lista = lista + numeroJuguetes  +" juguetes";
             }
         }
         return lista;
@@ -155,7 +155,7 @@ public class Controlador {
         }
         return lista;
     }
-    
+
     public String jugueteMasValorado(){
         ArrayList<Juguete> juguetes =  new ArrayList <Juguete>();
         for(Proveedor proveedor: proveedores){
@@ -172,12 +172,12 @@ public class Controlador {
                     Juguete e1 = (Juguete)o1;
                     Juguete e2 = (Juguete)o2;
                     return new Float(e1.getValorUnitario()+e1.getValorAdicional()).compareTo(new Float(e2.getValorUnitario()+e2.getValorAdicional()));
-            }   
+            }
         });
-        
+
         return "El juguete con mayor precio de venta tiene el codigo "+ juguetes.get(0).getCodigo() ;
     }
-    
+
     public String juguetesElectronicos(){
         ArrayList<Electronico> juguetesElectronicos = new ArrayList<Electronico>();
         for(Proveedor proveedor: proveedores){
@@ -191,7 +191,7 @@ public class Controlador {
                     Electronico e1 = (Electronico)o1;
                     Electronico e2 = (Electronico)o2;
                     return new Float(e1.getValorUnitario()+e1.getValorAdicional()).compareTo(new Float(e2.getValorUnitario()+e2.getValorAdicional()));
-            }   
+            }
         });
         String lista = "Los juguetes son: \n";
         for(Electronico electronico :juguetesElectronicos){
@@ -199,22 +199,22 @@ public class Controlador {
         }
         return lista;
     }
-    
+
     public int numJuguetesPorProveedor(String nombre, boolean tipo){
         Proveedor proveedorCheck=null;
         for(Proveedor proveedor: proveedores){
             if((proveedor.getNombre().equals(nombre))){
-                proveedorCheck= proveedor; 
+                proveedorCheck= proveedor;
             }
         }
         if(tipo){
             return proveedorCheck.getJuguetesElectronicos().size();
         }else{
-            
+
             return proveedorCheck.getJuguetesMecanicos().size();
         }
     }
-    
+
     public String juguetesPorTipo(boolean tipo){
         String lista = "Los proveedores son \n";
         for(Proveedor proveedor: proveedores){
@@ -226,15 +226,9 @@ public class Controlador {
                 if(proveedor.getJuguetesMecanicos().size()>0){
                     lista = lista + proveedor.getNombre()+" \n";
                 }
-                
-            }   
+
+            }
         }
         return lista;
     }
 }
-    
-    
-    
-    
-    
-

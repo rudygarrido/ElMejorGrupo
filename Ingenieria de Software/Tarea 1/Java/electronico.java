@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jugueteria;
+
 
 /**
  *
@@ -17,5 +17,5 @@ public class Electronico extends Juguete{
     public Electronico(String codigo, double valorUnitario, Proveedor proveedor, String marca, int edad, double valorAdicional, boolean tipoJuguete) {
         super(codigo, valorUnitario, proveedor, marca, edad, valorAdicional, tipoJuguete);
     }
-    
+
 }
