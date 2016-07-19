@@ -1,12 +1,21 @@
-public class electronico extends juguete{
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jugueteria;
 
-  public electronico(String codigo, String marca, Integer edad, Integer numProveedor, double valorUnitario, double valorAdicional){
-    super(codigo, marca, edad, numProveedor, valorUnitario, valorAdicional);
-  }
+/**
+ *
+ * @author Rudy Alex
+ */
+public class Electronico extends Juguete{
 
-  @Override
-  public double getPrecioFinal(){
-    double temp = this.getValorUnitario() + (this.getValorAdicional()*2);
-    return temp;
-  }
+    public Electronico() {
+    }
+
+    public Electronico(String codigo, double valorUnitario, Proveedor proveedor, String marca, int edad, double valorAdicional, boolean tipoJuguete) {
+        super(codigo, valorUnitario, proveedor, marca, edad, valorAdicional, tipoJuguete);
+    }
+    
 }

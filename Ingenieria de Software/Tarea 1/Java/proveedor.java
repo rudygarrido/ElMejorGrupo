@@ -1,35 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jugueteria;
 import java.util.ArrayList;
+/**
+ *
+ * @author Rudy Alex
+ */
+public class Proveedor {
+    private int id;
+    private ArrayList<Mecanico> juguetesMecanicos;
+    private ArrayList<Electronico> juguetesElectronicos;
+    private String nombre;
 
-public class proveedor{
-  private ArrayList<juguete> juguetesMecanicos, juguetesElectronicos;
-  private Integer id;
-  private String nombre;
+    public Proveedor(int id, ArrayList<Mecanico> juguetesMecanicos, ArrayList<Electronico> juguetesElectronicos, String nombre) {
+        this.id = id;
+        this.juguetesMecanicos = juguetesMecanicos;
+        this.juguetesElectronicos = juguetesElectronicos;
+        this.nombre = nombre;
+    }
 
-  public proveedor(Integer id, String nombre){
-    juguetesMecanicos = new ArrayList<juguete>();
-    juguetesElectronicos = new ArrayList<juguete>();
-    this.id = id;
-    this.nombre = nombre;
-  }
+    public int getId() {
+        return id;
+    }
 
-  public void setNombre(String nombre){
-    this.nombre = nombre;
-  }
+    public ArrayList<Mecanico> getJuguetesMecanicos() {
+        return juguetesMecanicos;
+    }
 
-  public void setId(Integer id){
-    this.id = id;
-  }
+    public ArrayList<Electronico> getJuguetesElectronicos() {
+        return juguetesElectronicos;
+    }
 
-  public void setJuguetesMecanicos(juguete mecanico){
-    juguetesMecanicos.add(mecanico);
-  }
+    public String getNombre() {
+        return nombre;
+    }
 
-  public void setJuguetesElectronicos(juguete electronico){
-    juguetesElectronicos.add(electronico);
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public String toString(){
-    String temp = "Proveedor "+ this.nombre+ " y ID "+ this.id;
-    return temp;
-  }
+    public void setJuguetesMecanicos(ArrayList<Mecanico> juguetesMecanicos) {
+        this.juguetesMecanicos = juguetesMecanicos;
+    }
+
+    public void setJuguetesElectronicos(ArrayList<Electronico> juguetesElectronicos) {
+        this.juguetesElectronicos = juguetesElectronicos;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    
 }

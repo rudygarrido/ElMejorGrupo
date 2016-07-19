@@ -1,69 +1,92 @@
-public class juguete{
-  private String codigo, marca;
-  private Integer edad, numProveedor;
-  private double valorUnitario, valorAdicional;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jugueteria;
 
-  public juguete(String codigo, String marca, Integer edad, Integer numProveedor, double valorUnitario, double valorAdicional){
-    this.codigo = codigo;
-    this.marca = marca;
-    this.edad = edad;
-    this.valorUnitario = valorUnitario;
-    this.valorAdicional = valorAdicional;
-  }
+/**
+ *
+ * @author Rudy Alex
+ */
+public class Juguete {
+    private String codigo;
+    private double valorUnitario;
+    private Proveedor proveedor;
+    private String marca;
+    private int edad;
+    private double valorAdicional;
+    private boolean tipoJuguete;
 
-  public void setCodigo(String codigo){
-    this.codigo = codigo;
-  }
+    public Juguete() {
+    }
 
-  public void setMarca(String marca){
-    this.marca = marca;
-  }
+    public Juguete(String codigo, double valorUnitario, Proveedor proveedor, String marca, int edad, double valorAdicional, boolean tipoJuguete) {
+        this.codigo = codigo;
+        this.valorUnitario = valorUnitario;
+        this.proveedor = proveedor;
+        this.marca = marca;
+        this.edad = edad;
+        this.valorAdicional = valorAdicional;
+        this.tipoJuguete = tipoJuguete;
+    }
 
-  public void setEdad(Integer edad){
-    this.edad = edad;
-  }
+    public String getCodigo() {
+        return codigo;
+    }
 
-  public void setNumProveedor(Integer numProveedor){
-    this.numProveedor = numProveedor;
-  }
+    public double getValorUnitario() {
+        return valorUnitario;
+    }
 
-  public void setValorUnitario(double valorUnitario){
-    this.valorUnitario = valorUnitario;
-  }
+    public Proveedor getProveedor() {
+        return proveedor;
+    }
 
-  public void setValorAdicional(double valorAdicional){
-    this.valorAdicional = valorAdicional;
-  }
+    public String getMarca() {
+        return marca;
+    }
 
-  public String getCodigo(){
-    return this.codigo;
-  }
+    public int getEdad() {
+        return edad;
+    }
 
-  public String getMarca(){
-    return this.marca;
-  }
+    public double getValorAdicional() {
+        return valorAdicional;
+    }
 
-  public Integer getEdad(){
-    return this.edad;
-  }
+    public boolean isTipoJuguete() {
+        return tipoJuguete;
+    }
 
-  public Integer getNumProveedor(){
-    return this.numProveedor;
-  }
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
 
-  public double getValorUnitario(){
-    return this.valorUnitario;
-  }
+    public void setValorUnitario(double valorUnitario) {
+        this.valorUnitario = valorUnitario;
+    }
 
-  public double getValorAdicional(){
-    return this.valorAdicional;
-  }
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
+    }
 
-  public double getPrecioFinal(){
-    return 0.0;
-  }
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
 
-  public String toString(){
-    return ("Objeto tipo Jueguete, con código "+this.codigo+", con un valor unitario "+this.valorUnitario+", marca "+this.marca+", edad minima del niño "+this.edad+" y el número de proveedor "+this.numProveedor);
-  }
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setValorAdicional(double valorAdicional) {
+        this.valorAdicional = valorAdicional;
+    }
+
+    public void setTipoJuguete(boolean tipoJuguete) {
+        this.tipoJuguete = tipoJuguete;
+    }
+    
+    
+    
 }
