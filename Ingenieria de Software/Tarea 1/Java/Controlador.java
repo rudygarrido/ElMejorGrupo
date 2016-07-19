@@ -5,12 +5,15 @@
  */
 package jugueteria;
 import java.util.*;
+
+private ArrayList<Proveedor> proveedores;
+private int tipoUsuario=0;
 /**
  *
  * @author Rudy Alex
  */
 public class Controlador {
-    private int tipoUsuario=0;
+    
 
     public int getTipoUsuario() {
         return tipoUsuario;
@@ -28,9 +31,6 @@ public class Controlador {
         this.proveedores = proveedores;
     }
     
-    
-    
-    private ArrayList<Proveedor> proveedores;
     
     public void ingresarJuguete(String codigo, double valorUnitario, Proveedor proveedor, 
                                         String marca, int edad, double valorAdicional, 
