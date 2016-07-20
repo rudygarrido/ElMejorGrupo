@@ -6,15 +6,18 @@
 
 import java.util.*;
 
-private ArrayList<Proveedor> proveedores;
-private int tipoUsuario=0;
+
 /**
  *
  * @author Rudy Alex
  */
 public class Controlador {
+	private ArrayList<Proveedor> proveedores;
+	private int tipoUsuario=0;
 
-
+	/*public Controlador(){
+		
+	}*/
     public int getTipoUsuario() {
         return tipoUsuario;
     }
@@ -231,4 +234,8 @@ public class Controlador {
         }
         return lista;
     }
+	
+	public String toString(){
+		return "HOLAAAAAAA";
+	}
 }
