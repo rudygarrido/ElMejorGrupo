@@ -192,13 +192,24 @@ public static void main(String[] args){
 
 
                         case 2:
-                            System.out.println("GESTION DE PRODUCTOS");
+                        	System.out.println("GESTION DE PRODUCTOS");System.out.println("GESTION ");
+				System.out.println("Proveedores\n"+cemaco.listarProveedores());
+				System.out.println("");
 
                             break;
 
 
                         case 3:
-							System.out.println("REPORTE DE ESTADISTICAS");
+				System.out.println("REPORTE DE ESTADISTICAS");
+				System.out.println("|            .       ");
+				System.out.println("|        . .         ");
+				System.out.println("|       .            ");
+				System.out.println("|  . . .             ");
+				System.out.println("| .                  ");
+				System.out.println("|.                   ");
+				System.out.println("|--------------------");
+
+                            break;
 
                             break;
 
