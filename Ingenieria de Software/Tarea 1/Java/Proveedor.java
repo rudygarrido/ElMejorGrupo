@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package jugueteria;
 import java.util.ArrayList;
 /**
  *
@@ -20,9 +21,10 @@ public class Proveedor {
         this.juguetesElectronicos = juguetesElectronicos;
         this.nombre = nombre;
     }
-	public Proveedor(){
-		
-	}
+
+    public Proveedor() {
+    }
+    
     public int getId() {
         return id;
     }
@@ -54,6 +56,6 @@ public class Proveedor {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-
+    
+    
 }
