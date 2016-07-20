@@ -92,12 +92,19 @@ public static void main(String[] args){
                         case 1:
 							
                             System.out.println("Ingrese el codigo, valor unitario, marca, \nedad, tipo juguete (1/0), complejida en su respectivo orden:");
-							double valorAdicional = 5.0;
-							String codigo = teclado.nextLine();
+							
+                                                        double valorAdicional = 5.0;
+							System.out.println("Codigo ");
+                                                        String codigo = teclado.nextLine();
+                                                        System.out.println("Valor ");
 							double valorUnitario = teclado.nextDouble();
+                                                        System.out.println("Codigo Proveedor ");
 							int proveedor = teclado.nextInt();
+                                                        System.out.println("Marca ");
 							String marca= teclado.nextLine();
+                                                        System.out.println("Edad ");
 							int edad = teclado.nextInt();
+                                                        System.out.println("Tipo ");
                                                         int tipo = teclado.nextInt();
                                                         boolean tipoJuguete =false;
                                                         if(tipo==0){
@@ -105,6 +112,7 @@ public static void main(String[] args){
                                                         }else{
                                                             tipoJuguete=true;
                                                         }
+                                                        System.out.println("Complejidad ");
 							int complejidad = teclado.nextInt();
 							cemaco.ingresarJuguete( codigo, valorUnitario, proveedor, marca, edad, valorAdicional, tipoJuguete, complejidad);
 							System.out.println("Juguete Ingresado");
@@ -192,24 +200,13 @@ public static void main(String[] args){
 
 
                         case 2:
-                        	System.out.println("GESTION DE PRODUCTOS");System.out.println("GESTION ");
-				System.out.println("Proveedores\n"+cemaco.listarProveedores());
-				System.out.println("");
+                            System.out.println("GESTION DE PRODUCTOS");
 
                             break;
 
 
                         case 3:
-				System.out.println("REPORTE DE ESTADISTICAS");
-				System.out.println("|            .       ");
-				System.out.println("|        . .         ");
-				System.out.println("|       .            ");
-				System.out.println("|  . . .             ");
-				System.out.println("| .                  ");
-				System.out.println("|.                   ");
-				System.out.println("|--------------------");
-
-                            break;
+							System.out.println("REPORTE DE ESTADISTICAS");
 
                             break;
 
