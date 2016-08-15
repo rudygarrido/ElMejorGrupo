@@ -20,24 +20,13 @@
 
     <!-- 2. Load our 'modules' -->
     <script src='app/app.component.js'></script>
-    <script src='app/test.component.js'></script>
-    <script src='app/home.component.js'></script>    
     <script src='app/main.js'></script>
 
   </head>
 
   <!-- 3. Display the application -->
   <body>
-
-    <ul>
-      <li>
-        <a [routerLink]="['Home']">Home</a>
-      </li>
-      <li>
-        <a [routerLink]="['Test']">Test</a>
-      </li>
-    </ul>
-    <router-outlet></router-outlet>
+    <test-thingo>Loading...</test-thingo>
   </body>
 
 </html>
