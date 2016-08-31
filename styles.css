@@ -1,65 +1,81 @@
 body{
-  background-color: antiquewhite;
+  background-color: #f1f1f1;
   font-family: Arial;
   
 }
 
+.Title{
+  font-size:x-large;
+  font-weight: bold;
+}
+
 .EpidemBoard__AccountBlock{
   color: white;
+  font-size: x-small;
+  font-weight: bold;
   position: absolute;
-  background-color: black;
-  border-color: transparent;
-  right: 0px
+  background-color: #1b88bf;
+  border-color: #1b88bf;
+  right: 0px;
+  top: 2px;
 }
 
 .EpidemBoard__Buttons{
   display: block;
   position: absolute;
-  background-color: black;
+  background-color: white;
   border-color:white;
   border-style:solid;
   color: ghostwhite;
-  width: 400px;
+  width: 440px;
   height: 60px;
-  top: 20px;
+  top: 25px;
   right: 0px;
 }
 
 .EpidemBoard__Buttons__Main{
   position: relative;
+  background-color: #1b88bf;
   width: 133px;
-  height: 20px;
-  top: 20px;
-  border-color: white;
-  border-width: 0px;
-  left: -10px;
+  left: 10;
+  text-align: center;
+  height: 100%;
+  border-color: grey;
+  border-width: 1px;
 }
 
 .EpidemBoard__Buttons__Alerts{
-  position: relative;
-  width: 133px;
-  height: 20px;
-  left: 138px;
-  border-color: white;
-  border-width: 0px;
+  position: absolute;
+  background-color: #1b88bf;
+  width: 127px;
+  height: 100%;
+  right: 152px;
+  border-color: grey;
+  border-width: 1px;
 }
 
 .EpidemBoard__Buttons__Inbox{
-  position: relative;
-  width: 165px;
-  height: 20px;
-  left: 230px;
-  top: -20px;
-  border-color: white;
+  position: absolute;
+  width: 133px;
+  right: 2px;
+  height: 100%;
+  border-color: grey;
+  border-width: 1px;
+  background-color: #1b88bf;
   
 }
 .EpidemBoard__MainView{
   position: absolute;
   display:block;
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-width: .5px;
   top: 100px;
   height: 80%;
   width: 100%;
-  background: white;  
+  background: #fafafa;  
 
 }
 
