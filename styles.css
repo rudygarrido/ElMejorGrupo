@@ -1,0 +1,83 @@
+body{
+  background-color: antiquewhite;
+  font-family: Arial;
+  
+}
+
+.EpidemBoard__AccountBlock{
+  color: white;
+  position: absolute;
+  background-color: black;
+  border-color: transparent;
+  right: 0px
+}
+
+.EpidemBoard__Buttons{
+  display: block;
+  position: absolute;
+  background-color: black;
+  border-color:white;
+  border-style:solid;
+  color: ghostwhite;
+  width: 400px;
+  height: 60px;
+  top: 20px;
+  right: 0px;
+}
+
+.EpidemBoard__Buttons__Main{
+  position: relative;
+  width: 133px;
+  height: 20px;
+  top: 20px;
+  border-color: white;
+  border-width: 0px;
+  left: -10px;
+}
+
+.EpidemBoard__Buttons__Alerts{
+  position: relative;
+  width: 133px;
+  height: 20px;
+  left: 138px;
+  border-color: white;
+  border-width: 0px;
+}
+
+.EpidemBoard__Buttons__Inbox{
+  position: relative;
+  width: 165px;
+  height: 20px;
+  left: 230px;
+  top: -20px;
+  border-color: white;
+  
+}
+.EpidemBoard__MainView{
+  position: absolute;
+  display:block;
+  top: 100px;
+  height: 80%;
+  width: 100%;
+  background: white;  
+
+}
+
+.EpidemBoard__MainView__Map{
+  position: absolute;
+  height: 60%;
+  width: 40%;
+  top: 20px;
+  right: 10px;
+  border-style:solid;  
+}
+
+.EpidemBoard__MainView__SympthomList{
+  position: relative;
+  left: auto;
+  top: 0px;
+  height: 60%;
+  width: 40%;
+  
+  border-style: solid;
+}
