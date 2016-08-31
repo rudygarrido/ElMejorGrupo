@@ -1,3 +1,13 @@
+<script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 15.7, lng: -92.4},
+                    zoom: 8
+                });
+            }
+</script>
+
 <link rel="stylesheet" href="styles.css">
 
 <div class="EpidemBoard">
@@ -13,7 +23,11 @@
 	<div class="EpidemBoard__MainView">
 	Bienvenido a su dashboard.
 		<div class="EpidemBoard__MainViewBox">
-			<div class="EpidemBoard__MainView__Map">Aca Ponemos el mapa</div>
+
+			<div class="EpidemBoard__MainView__Map" id="map">
+
+			</div>
+
 			<div class="EpidemBoard__MainView__SympthomList">Aca ponemos la lista de sintomas</div>
 		</div>
 	</div>
@@ -30,3 +44,5 @@
 		<button class="EpidemBoard__InboxView__Send">Enviar Correo</button>
 	</div>
 </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhPyRa40wxABwjLJUkSqRza4aYY4PU1Jk&callback=initMap" async defer></script>
