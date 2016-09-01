@@ -93,6 +93,7 @@
 				<td>Pablo Koch</td>
 				<td>Re: Cambio de Product Manager</td>
 				<td>Me da igual</td>
+			</tr>
 			<tr>
 				<td>...</td>
 				<td>...</td>
@@ -102,9 +103,10 @@
 		</table>
 		<button class="EpidemBoard__InboxView__Send">Enviar Correo</button>
 	</div>
+	<div class="Empty__Space"></div>
 </div>
 
-
+<div class="UserBox" id="userbox" style="display:none" onmouseleave="displayUserBox(1)"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhPyRa40wxABwjLJUkSqRza4aYY4PU1Jk&callback=initMap" async defer></script>
 
@@ -127,5 +129,16 @@ function displayAlert() {
     document.getElementById("mainview").style.display = "none";
     document.getElementById("inbox").style.display = "none";
     document.getElementById("alert").style.display = "block";
+}
+</script>
+
+<script>
+function displayUserBox(enabled){
+	if (enabled == 0){
+		document.getElementById("userbox").style.display="block";
+	}
+	else{
+		document.getElementById("userbox").style.display="none";
+	}
 }
 </script>
