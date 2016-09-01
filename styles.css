@@ -125,7 +125,7 @@ body{
 
 .Login__Form{
  position:absolute; 
- margin-top: 30px;
+ top: 25%;
  margin-left: 40%
 }
 
@@ -157,4 +157,63 @@ body{
   width: 100%;
   border-top-width: 2px;
   background-color#f1f1f1: 
+}
+
+.Login__Form__User{
+  position: relative;
+  padding: 10px;
+  left: 80px;
+}
+.Recovery{
+  position: absolute;
+  display:block;
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-width: 2px;
+  top: 100px;
+  height: 80%;
+  width: 100%;
+  background: #fafafa; 
+}
+
+.Empty__Space{
+  position: absolute;
+  height: 50px;
+  bottom: 10px;
+  border-top-style: solid;
+  width: 100%;
+  border-top-width: 2px;
+  background-color#f1f1f1: 
+}
+
+.EpidemBoard__AlertView{
+  position: absolute;
+  display:block;
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-width: .5px;
+  top: 100px;
+  height: 80%;
+  width: 100%;
+  background: #fafafa; 
+}
+
+.EpidemBoard__AlertView__Table{
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  border-spacing: 5px;  
+}
+
+.EpidemBoard__InboxView__Table{
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  border-spacing: 5px;  
 }

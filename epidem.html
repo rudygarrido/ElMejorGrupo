@@ -12,16 +12,16 @@
 
 <h1 class= "Title">Sympthomapp</h1>
 <div class="EpidemBoard">
-	<button class="EpidemBoard__AccountBlock">nombre_usuario [imagen]</button>
+	<button class="EpidemBoard__AccountBlock">Ben Dover [imagen]</button>
 
 	<div class="EpidemBoard__Buttons">
-		<button class="EpidemBoard__Buttons__Main"> Pantalla Principal </button>
-		<button class="EpidemBoard__Buttons__Alerts"> Alertas [x] </button>
-		<button class="EpidemBoard__Buttons__Inbox"> Bandeja de entrada [x]</button>
+		<button class="EpidemBoard__Buttons__Main" onclick="displayMain()"> Pantalla Principal </button>
+		<button class="EpidemBoard__Buttons__Alerts" onclick="displayAlert()"> Alertas [x] </button>
+		<button class="EpidemBoard__Buttons__Inbox" onclick="displayInbox()"> Bandeja de entrada [x]</button>
 	</div>
 
-	<div class="EpidemBoard__MainView">
-	Bienvenido a su dashboard.
+	<div class="EpidemBoard__MainView" id="mainview">
+	<h2>Bienvenido a su dashboard.</h2>
 		<div class="EpidemBoard__MainViewBox">
 
 			<div class="EpidemBoard__MainView__Map" id="map">
@@ -50,17 +50,82 @@
 		</div>
 	</div>
 
-	<div class="EpidemBoard__AlertView" style= "display:none">
-	Esto no se deberia mostrar!*
-		<ul class="EpidemBoard__AlertView__List">Lista de alertas</ul>
-		<button class="EpidemBoard_AlertView_CreateAlert">Crear alerta</button>
+	<div class="EpidemBoard__AlertView" id="alert" style= "display:none">
+	<h2>Alertas</h2>
+		<table class="EpidemBoard__AlertView__Table">
+			<tr>
+				<th>Alerta</th>
+				<th>Posicion Geografica</th>
+				<th>Descripcion</th>
+			</tr>
+			<tr>
+				<td>Mas de 500 casos de diarrea.</td>
+				<td>Zona 15, Guatemala</td>
+				<td>Se detectaron al rededor de ... </td>
+			</tr>
+			<tr>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			</tr>
+		</table>
+
+		<button class="EpidemBoard__AlertView__SendButton">Crear alerta</button>
 	</div>
 
-	<div class="EpidemBoard__InboxView" style= "display:none">
-	Esto no se deberia mostrar!*
-		<ul class="EpidemBoard__InboxView__List">Lista de correos</ul>
+	<div class="EpidemBoard__InboxView"  id="inbox" style= "display:none">
+	<h2>Alertas</h2>
+		<table class="EpidemBoard__InboxView__Table">
+			<tr>
+				<th>Fecha</th>
+				<th>Enviado Por</th>
+				<th>Subject</th>
+				<th>Preview</th>
+			</tr>
+			<tr>
+				<td>31/08/2016</td>
+				<td>Rudy Garrido</td>
+				<td>Re: Re: Cambio de Product Manager</td>
+				<td>No se, mejor trabajen...</td>
+			</tr>
+			<tr>
+				<td>31/08/2016</td>
+				<td>Pablo Koch</td>
+				<td>Re: Cambio de Product Manager</td>
+				<td>Me da igual</td>
+			<tr>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			</tr>
+		</table>
 		<button class="EpidemBoard__InboxView__Send">Enviar Correo</button>
 	</div>
 </div>
 
+
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhPyRa40wxABwjLJUkSqRza4aYY4PU1Jk&callback=initMap" async defer></script>
+
+<script>
+function displayMain() {
+    document.getElementById("mainview").style.display = "block";
+    document.getElementById("inbox").style.display = "none";
+    document.getElementById("alert").style.display = "none";
+}
+</script>
+<script>
+function displayInbox() {
+    document.getElementById("mainview").style.display = "none";
+    document.getElementById("inbox").style.display = "block";
+    document.getElementById("alert").style.display = "none";
+}
+</script>
+<script>
+function displayAlert() {
+    document.getElementById("mainview").style.display = "none";
+    document.getElementById("inbox").style.display = "none";
+    document.getElementById("alert").style.display = "block";
+}
+</script>
