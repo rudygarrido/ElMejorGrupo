@@ -109,3 +109,52 @@ body{
   border-spacing: 5px;
 }
 
+.Login{
+  position: absolute;
+  display:block;
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-width: 2px;
+  top: 100px;
+  height: 80%;
+  width: 100%;
+  background: #fafafa;  
+}
+
+.Login__Form{
+ position:absolute; 
+ margin-top: 30px;
+ margin-left: 40%
+}
+
+.Login__Form__Email{
+  padding: 10px;
+}
+
+.Login__Form__Password{
+  position: relative;
+  padding: 10px;
+  left: 61px;
+}
+
+.Login__Form__PasswordLabel{
+  position: relative;
+}
+
+.Login__Form__Button{
+  position: relative;
+  padding: 10px;
+  left: 50%;
+  border-radius: 20px
+}
+
+.Login__Options{
+  position: absolute;
+  bottom: 10px;
+  border-top-style: solid;
+  width: 100%;
+  border-top-width: 2px;
+  background-color#f1f1f1: 
+}

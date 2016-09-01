@@ -1,30 +1,27 @@
-<div class="container">
+<link rel="stylesheet" href="styles.css">
 
-	<div class="col-sm-6 col-sm-offset-3">
+<h1 class="Title">Sympthomapp</h1>
+<div class="Login">
 
-	    <h1><span class="fa fa-sign-in"></span> Login</h1>
+	<!-- LOGIN FORM -->
+	<form action="/login" method="post" class="Login__Form">
 
-	    <!-- mostrar mensajes que regresan con la autentificacion -->
+	    <div class="Login__Form__Email">
+	        <label>Correo Electronico:</label>
+	        <input type="text" class="Login__Form__EmailLabel" name="email"/>
+	    </div>
 
-	    <!-- LOGIN FORM -->
-	    <form action="/login" method="post">
-	        <div class="form-group">
-	            <label>Email</label>
-	            <input type="text" class="form-control" name="email">
-	        </div>
-	        <div class="form-group">
-	            <label>Password</label>
-	            <input type="password" class="form-control" name="password">
-	        </div>
+	    <div class="Login__Form__Password">
+	        <label>Password:</label>
+	        <input type="password" class="Login__Form__PasswordLabel" name="password"/>
+	    </div>
 
-	        <button type="submit" class="btn btn-warning btn-lg">Login</button>
-	    </form>
+	    <button type="submit" class="Login__Form__Button">Ingresar</button>
+	</form>
 
-	    <hr>
+	
+</div>
 
-	    <p>Necesitas una cuenta? <a href="/signup">Registrate</a></p>
-	    <p>O regresar a <a href="/">home</a>.</p>
-
-	</div>
-
+<div class="Login__Options">
+	<p>Perdio su password? <a href="/recovery">Recuperarlo</a> </p>
 </div>
